@@ -64,7 +64,7 @@ function prevSlide() {
   dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
       
-      updateCurrent(index) 
+       
       switch (index) {
       case 0:
         prevButton.style.visibility = "hidden"
@@ -78,6 +78,8 @@ function prevSlide() {
         nextButton.style.visibility = "visible"
         prevButton.style.visibility = "visible"
         }
+
+        updateCurrent(index)
     })
   })
 
