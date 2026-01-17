@@ -1,0 +1,15 @@
+section {
+    width: 1200px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    font-size: 18px;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+p {
+    font-weight: bold;
+}
