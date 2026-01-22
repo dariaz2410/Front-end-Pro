@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+section {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(39, 143, 227);
+  color: white;
+}
+
+.cityName {
+    font-size: 22px;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+.localTime {
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+
+.weatherConditions {
+  font-weight: bold;
+  padding: 10px 0 10px 0;
+}
+
+.secondSection {
+  text-align: center;
+}
+
+.temperature {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    background-image: url("./img/img_2.png");
+    background-repeat: no-repeat; /* Чтобы картинка не повторялась */
+    background-position: center; /* Центрирование картинки */
+    background-size: contain;
+    margin-left: 10px;
+}
+.update {
+  display: flex;
+  align-items: center;
+}
