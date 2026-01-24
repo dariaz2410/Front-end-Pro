@@ -25,32 +25,30 @@ async function fetchData() {
     cityName.textContent = data.name
 
     const miliseconds = 1000
-    const date = new Date(data.sys.sunrise * miliseconds);
     
-    let sunriseHours = date.getHours()
-    if (sunriseHours < 10) {
-      sunriseHours = "0" + sunriseHours
+    const date = new Date((data.sys.sunrise * miliseconds) + (data.timezone * miliseconds));
+    
+    function addZero(time) {
+        if (time < 10) {
+            time = "0" + time
+            return time
+        } else {
+            return time
+        }
     }
 
-    let sunriseMinutes = date.getUTCMinutes()
-    if (sunriseMinutes < 10) {
-      sunriseMinutes = "0" + sunriseMinutes
-    }
+    let sunriseHours = addZero(date.getUTCHours())
+
+    let sunriseMinutes = addZero(date.getUTCMinutes())
   
     sun.textContent = `Sunrise ${sunriseHours}:${sunriseMinutes}`
     
     const utcDate = new Date();
     const localTime = new Date(utcDate.getTime() + (data.timezone * miliseconds))
 
-    let hours = localTime.getUTCHours()
-    if (hours < 10) {
-      hours = "0" + minutes
-    }
+    let hours = addZero(localTime.getUTCHours())
 
-    let minutes = localTime.getUTCMinutes()
-    if (minutes < 10) {
-      minutes = "0" + minutes
-    }
+    let minutes = addZero(localTime.getUTCMinutes())
 
     time.textContent = `${hours} : ${minutes}`
     
@@ -79,7 +77,7 @@ async function fetchData() {
     currentTime.textContent = `${month} ${day}, ${hours}:${minutes}`
 
     btn.addEventListener('click', function() {
-      location.reload();
+      fetchData()
     });
 
   } catch (error) {
