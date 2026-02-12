@@ -1,0 +1,33 @@
+{
+  "name": "homework_21",
+  "version": "1.0.0",
+  "description": "HW 21",
+  "license": "ISC",
+  "author": "Daria",
+ 
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.28.6",
+    "bootstrap": "^5.3.8",
+    "dayjs": "^1.11.19"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.0",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.3",
+    "css-minimizer-webpack-plugin": "^7.0.4",
+    "mini-css-extract-plugin": "^2.10.0",
+    "sass": "^1.97.3",
+    "sass-loader": "^16.0.7",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.105.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.3"
+  }
+}
